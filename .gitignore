@@ -1,0 +1,36 @@
+# Keil MDK-ARM Build Output
+*.o
+*.d
+*.axf
+*.hex
+*.bin
+*.map
+*.lst
+*.crf
+*.htm
+*.dep
+*.lnp
+*.sct
+*.tra
+*.fed
+*.bak
+*.dbgconf
+
+# Build output directories
+**/obj/
+**/lst/
+**/RTE/_*/
+
+# Keil project user settings (optional, keep .uvprojx)
+*.uvoptx
+*.uvguix
+*.scvd
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*~
