@@ -14,3 +14,6 @@
 
 # Archives (original compressed source)
 *.7z
+
+# CodeQL artifacts
+_codeql_detected_source_root
