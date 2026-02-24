@@ -1,1 +1,0 @@
-.\obj\startup_nm1240.o: C:\Users\JPChang0\Desktop\nuvoTon\!Project-NuMotor Solution\!Development of NM1244\[Example Code] NuMotor NM1240_Rev4.1_20250806\SW\Library\Device\Nuvoton\NM1240\Source\ARM\startup_NM1240.s
