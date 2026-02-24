@@ -1,0 +1,16 @@
+# Keil MDK build output
+**/obj/
+**/lst/
+*.BAT
+*.uvoptx
+*.uvguix
+*.uvguix.*
+*.scvd
+
+# IAR build output
+**/Debug/
+**/Release/
+*.ewt
+
+# Archives (original compressed source)
+*.7z
