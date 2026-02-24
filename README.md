@@ -10,16 +10,25 @@ NM1240 是一款基於 ARM Cortex-M0 核心的馬達控制專用微控制器，�
 
 ```
 SampleCode.7z          # 壓縮檔，包含完整的示範程式碼
+SampleCode/            # 已解壓縮的原始碼
+CONTRIBUTING.md        # 貢獻指南與下一步建議
 ```
 
-### 原始碼說明（解壓縮後）
+### 原始碼說明（`SampleCode/SampleCode/UserProj/program/`）
 
 | 檔案 | 說明 |
 |------|------|
 | `main.c` | 主程式進入點，系統初始化與主迴圈 |
 | `system_parameter.H` | 系統參數定義（電壓、電流、PWM 頻率等） |
-| `motor_functions.c` | 馳以及控制核心函式（FOC 演算法等） |
-| `ISR.c` | 中斷服務程式（PWM、ADC 中斷處理） |
+| `system_initialize.C` | 系統週邊初始化（PWM、ADC、GPIO） |
+| `variable_initialize.c` | 變數初始化 |
+| `variable_typedefine.h` | 變數型別定義 |
+| `INT_ISR.C` | 中斷服務程式（PWM、ADC 中斷處理） |
+| `motor_funtions.c` | 馬達控制核心函式 |
+| `motor_FOC.c` | FOC（磁場導向控制）演算法 |
+| `motor_six_step.c` | 六步換相控制 |
+| `PI_control.c` | PI 控制器實作 |
+| `protocol.c` | 通訊協定處理 |
 
 ## 🛠️ 開發環境需求
 
@@ -53,6 +62,18 @@ SampleCode.7z          # 壓縮檔，包含完整的示範程式碼
 - **PWM 頻率**: 依應用需求設定
 - **電壓 / 電流限制**: 根據馬達與驅動板規格
 - **控制模式**: 支援速度環、電流環控制
+
+## 🎯 下一步 (Next Steps)
+
+完成快速開始後，建議您依以下順序進行：
+
+1. **閱讀原始碼** — 從 `system_parameter.H` 開始，了解馬達參數設定
+2. **理解控制架構** — 閱讀 `main.c` 與 `INT_ISR.C`，理解主迴圈與中斷流程
+3. **學習 FOC 演算法** — 閱讀 `motor_FOC.c` 與 `PI_control.c`，理解磁場導向控制
+4. **調整參數** — 根據您的馬達規格，修改 `system_parameter.H` 中的參數
+5. **硬體測試** — 連接 NM1240 開發板、驅動板與馬達，進行實機測試
+
+> 📖 更詳細的步驟說明請參考 [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 📝 注意事項
 
