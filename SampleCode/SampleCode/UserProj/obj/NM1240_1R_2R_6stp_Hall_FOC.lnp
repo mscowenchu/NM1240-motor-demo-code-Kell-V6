@@ -1,0 +1,23 @@
+--cpu Cortex-M0
+".\obj\usci_uart.o"
+".\obj\system_nm1240.o"
+".\obj\startup_nm1240.o"
+".\obj\sys.o"
+".\obj\clk.o"
+".\obj\gpio.o"
+".\obj\adc.o"
+".\obj\fmc.o"
+".\obj\main.o"
+".\obj\int_isr.o"
+".\obj\motor_foc.o"
+".\obj\motor_funtions.o"
+".\obj\motor_six_step.o"
+".\obj\pi_control.o"
+".\obj\protocol.o"
+".\obj\system_initialize.o"
+".\obj\variable_initialize.o"
+".\program\svpwm_v02.lib"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
+--map --first='startup_NM1240.o(RESET)' --datacompressor=off --info=inline --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --symbols
+--info sizes --info totals
+--list ".\lst\NM1240_1R_2R_6stp_Hall_FOC.map" -o .\obj\NM1240_1R_2R_6stp_Hall_FOC.axf
