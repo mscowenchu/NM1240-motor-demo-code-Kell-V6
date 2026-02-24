@@ -1,0 +1,36 @@
+# Keil MDK build artifacts
+*.o
+*.d
+*.axf
+*.bin
+*.hex
+*.lnp
+*.lst
+*.dep
+*.htm
+*.__i
+*._ia
+*._ip
+*._ll
+*.i
+*.map
+*.build_log.htm
+*.crf
+*.tra
+
+# Keil MDK user-specific files
+*.uvoptx
+*.uvguix
+*.scvd
+
+# Build output directories
+obj/
+lst/
+RTE/
+
+# 7-Zip archives (already tracked separately)
+# *.7z
+
+# OS-generated files
+.DS_Store
+Thumbs.db
